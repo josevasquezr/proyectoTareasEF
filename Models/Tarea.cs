@@ -17,6 +17,8 @@ namespace proyectoTareasEF.Models
         public string Descripcion { get; set; }
         public Prioridad PrioridadTarea { get; set; }
         public DateTime FechaCreacion { get; set; }
+        public bool Recordatorio { get; set; }
+        public DateTime? FechaHoraRecordatorio { get; set; }
         public virtual Categoria Categoria { get; set; }
         
         //[NotMapped]

@@ -16,6 +16,7 @@ namespace proyectoTareasEF
                 categoria.HasKey(p => p.CategoriaId);
                 categoria.Property(p => p.Nombre).IsRequired().HasMaxLength(150);
                 categoria.Property(p => p.Descripcion);
+                categoria.Property(p => p.Peso);
             });
 
             modelBuilder.Entity<Tarea>(tarea => {
@@ -26,6 +27,8 @@ namespace proyectoTareasEF
                 tarea.Property(p => p.Descripcion);
                 tarea.Property(p => p.PrioridadTarea);
                 tarea.Property(p => p.FechaCreacion);
+                tarea.Property(p => p.Recordatorio);
+                tarea.Property(p => p.FechaHoraRecordatorio);
                 tarea.Ignore(p => p.Resumen);
             });
         }
