@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace proyectoTareasEF.Models
 {
@@ -19,6 +20,8 @@ namespace proyectoTareasEF.Models
         public DateTime FechaCreacion { get; set; }
         public bool Recordatorio { get; set; }
         public DateTime? FechaHoraRecordatorio { get; set; }
+
+        [JsonIgnore]
         public virtual Categoria Categoria { get; set; }
         
         //[NotMapped]
