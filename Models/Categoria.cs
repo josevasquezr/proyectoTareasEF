@@ -14,7 +14,7 @@ namespace proyectoTareasEF.Models
         public string Descripcion { get; set; }
         public int Peso { get; set; }
 
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual ICollection<Tarea> Tareas { get; set; }
     }
 }

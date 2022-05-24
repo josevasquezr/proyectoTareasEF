@@ -21,7 +21,6 @@ namespace proyectoTareasEF.Models
         public bool Recordatorio { get; set; }
         public DateTime? FechaHoraRecordatorio { get; set; }
 
-        [JsonIgnore]
         public virtual Categoria Categoria { get; set; }
         
         //[NotMapped]
